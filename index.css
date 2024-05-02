@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+}
+
+header {
+    background-color: #388e3c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+nav a{
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #388e3c;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Section Styles */
+#login {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button{
+    width: calc(100% - 22px);
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.button:hover{
+    background-color: #388e3c;
+}
+
+a[href="signup.html"]{
+    width: calc(100% - 22px); 
+    padding: 10px;
+    background-color: #4caf50; 
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+a[href="signup.html"]:hover{
+    background-color: #388e3c;
+
+}
+
+/* Footer Styles */
+footer {
+    background-color: #388e3c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

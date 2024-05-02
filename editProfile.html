@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Scholars Connect </title>
+    <link rel="stylesheet" type="text/css" href="editProfile.css" media="screen, print" />
+</head>
+<body>
+    <header>
+        <h1> Edit Profile </h1>
+    </header>
+
+    <nav id = "main-nav">
+        <ul>
+            <li><a href = "homeFeed.html"> Home </a></li>
+            <li><a href = "resources.html"> Resources </a></li>
+            <li><a href = "profile.html"> Profile </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+        </ul>
+    </nav>
+    <nav id = "profile-nav">
+        <ul>
+            <li><a href = "editProfile.html"> Edit Profile </a></li>
+            <li><a href = "friends.html"> Friends </a></li>
+            <li><a href = "calendar.html"> Calendar </a></li>
+        </ul>
+    </nav>
+    <section id = "editProfile">
+        <form action = "profile.html" method = "POST">
+            <label for = "firstname"> First Name: </label>
+            <input type = "text" id = "firstname" name = "firstname" required>
+            <label for = "lastname"> Last Name: </label>
+            <input type = "text" id = "lastname" name = "lastname" required>
+            <label for = "email"> Email Address: </label>
+            <input type = "text" id = "email" name = "email" required>
+            <label for = "username"> Username: </label>
+            <input type = "text" id = "username" name = "username" required>
+            <label for = "password"> Password: </label>
+            <input type = "text" id = "password" name = "password" required>
+            <button type = "submit"> Save Changes </button>
+        </form>
+    </section>
+</body>

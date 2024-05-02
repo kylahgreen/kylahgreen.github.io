@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title> Scholars Connect </title>
+    <link rel="stylesheet" type="text/css" href="homeFeed.css" media="screen, print" />
+</head>
+<body>
+    <header>
+        <h1> Home Feed - Scholars Connect </h1>
+        <a href = "index.html" class="logout-button">Logout</a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href = "homeFeed.html"> Home </a></li>
+            <li><a href = "resources.html"> Resources </a></li>
+            <li><a href = "profile.html"> Profile </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+        </ul>
+    </nav>
+    <section id = "userPosts">
+        <h2> Posts </h2>
+        <div class = "post">
+            <div class = "username">
+                <p>@kylahraegr</p>
+            </div>
+            <div class = "content">
+                <p>This is my first post! #scholarsconnect</p>
+            </div>
+            <div class = "footer">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+        <div class = "post">
+            <div class = "username">
+                <p>@haleyehill</p>
+            </div>
+            <div class = "content">
+                <p>Go look at my new posts!</p>
+            </div>
+            <div class = "footer">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+        <div class = "post">
+            <div class = "username">
+                <p>@carlychaney</p>
+            </div>
+            <div class = "content">
+                <p>Kylah recommended me to join...</p>
+            </div>
+            <div class = "footer">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+        <div class = "post">
+            <div class = "username">
+                <p>@carlithayer</p>
+            </div>
+            <div class = "content">
+                <p>Does anyone know how to add new friends on here?</p>
+            </div>
+            <div class = "footer">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+    </section>
+    <section id = "newPost">
+        <h2> Create A Post </h2>
+        <form action = "homeFeed.php" method = "post">
+            <label for = "post"></label>
+            <input type = "text" id = "post" name = "post" required>
+            <button type = "post"> Post </button>    
+        </form>
+    </section>
+    <footer>
+        <p>& copy; 2024 Scholars Connect</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en";
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Scholars Connect </title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen, print" />
+</head>
+<body>
+    <header>
+        Scholars Connect
+    </header>
+    <nav>
+        <a href = "aboutBeforeLogin.html" > About Us </a>
+    </nav>
+    <h1>
+        <section id = "login">
+            <h2> Login </h2>
+            <form id = "loginForm" action = "homeFeed.html" method = "post" onsubmit = "return validateForm()">
+                <label for = "username"> Username: </label>
+                <input type = "text" id = "username" name = "username" required>
+                <label for = "password"> Password: </label>
+                <input type = "text" id = "password" name = "password" required>
+                <button type = "submit" class = "button" > Sign In </button>
+                <a href = "signup.html"> Sign Up </a>     
+            </form>
+        </section>
+    </h1>
+    <script>
+        function validateForm(){
+            var username = document.getElementById('username').value.trim();
+            var password = document.getElementById('password').value.trim();
+            if (username === '' || password === ''){
+                alert('Please fill in both username and password fields.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <footer>
+        <p> & copy; 2024 Scholars Connect </p>
+    </footer>
+</body>
+</html>
+

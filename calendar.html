@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Scholars Connect </title>
+    <link rel="stylesheet" type="text/css" href="calendar.css" media="screen, print" />
+</head>
+<body>
+    <header>
+        <h1> Calendar </h1>
+    </header>
+    <nav id = "main-nav">
+        <ul>
+            <li><a href = "homeFeed.html"> Home </a></li>
+            <li><a href = "resources.html"> Resources </a></li>
+            <li><a href = "profile.html"> Profile </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+        </ul>
+    </nav>
+    <nav id = "profile-nav">
+        <ul>
+            <li><a href = "editProfile.html"> Edit Profile </a></li>
+            <li><a href = "friends.html"> Friends </a></li>
+            <li><a href = "calendar.html"> Calendar </a></li>
+        </ul>
+    </nav>
+    <div id = "calendar-container"> </div>
+    <button id = "add-event" onclick = "toggleEventForm()"> Add Event </button>
+    <div id = "event-form">
+        <input type = "date" id = "date" placeholder = "Select Event Date: ">
+        <input type = "time" id = "time" placeholder = "Select Event Time: ">
+        <input type = "text" id = "title" placeholder = "Title: ">
+        <button id = "submit" onclick = "toggleEventForm()"> Submit </button>
+    </div>
+    <script>
+        //Data
+        const cDate = new Date();
+        const cDay = cDate.getDate();
+        const cMonth = cDate.getMonth();
+        const cYear = cDate.getFullYear();
+
+        //Days in Month
+        const daysInMonth = new Date(cYear, cMonth + 1, 0).getDate();
+        let calendar = '<table>';
+            calendar += '<tr><th colspan = "7">' + new Date(cYear, cMonth).toLocaleDateString('en-US', {month: 'long', year: 'numeric'}) + '</th></tr>';
+            calendar += '<tr><th> Sun </th><th> Mon </th><th> Tue </th><th> Wed </th><th> Thu </th><th> Fri </th><th> Sat </th></tr>';
+            calendar += '<tr>';
+        let dayOfWeek = new Date(cYear, cMonth, 1).getDay();
+        for(let i = 0; i < dayOfWeek; i++){
+            calendar += '<td></td>';
+        }
+        for(let d = 1; d <= daysInMonth; d++){
+            if(d === cDay){
+                calendar += '<td class = "today">' + d + '</td>';
+            } else{
+                calendar += '<td>' + d + '</td>';
+            }
+            if(new Date(cYear, cMonth, d).getDay() === 6 && d != daysInMonth){
+                calendar += '<tr></tr>';
+            }
+        }
+        dayOfWeek = new Date(cYear, cMonth, daysInMonth).getDay();
+        for(let i = dayOfWeek + 1; i < 7; i++){
+            calendar += '<td></td>';
+        }
+        calendar += '</tr>';
+        calendar += '</table>';
+        document.getElementById('calendar-container').innerHTML = calendar;
+        function toggleEventForm(){
+            const form = document.getElementById('event-form');
+            if (form.style.display === 'block'){
+                form.style.display = 'none';
+            } else{
+                form.style.display = 'block';
+            }
+        }
+        function addEvent(){
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const title = document.getElementById('title').value;
+            const statement = date + ' at ' + time + ': ' + title;
+            if (title.trim() !== ''){
+                alert('Added: ' + statement);
+                document.getElementById('date').value = '';
+                document.getElementById('time').value = '';
+                document.getElementById('title').value = '';
+                toggleEventForm();
+            } else{
+                alert('Missing Input Field');
+            }
+        }
+    </script>
+    <footer>
+        <p> & copy; 2024 Scholars Connect </p>
+    </footer>
+</body>
+</html>

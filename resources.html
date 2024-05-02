@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> Scholars Connect </title>
+    <link rel="stylesheet" type="text/css" href="resources.css" media="screen, print" />
+</head>
+<body>
+    <header>
+        <h1> Resources - Scholars Connect </h1>
+        <a href = "index.html" class="logout-button">Logout</a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href = "homeFeed.html"> Home </a></li>
+            <li><a href = "resources.html"> Resources </a></li>
+            <li><a href = "profile.html"> Profile </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+        </ul>
+    </nav>
+    <section>
+        <section id = "search">
+            <h2>Search for Resources</h2>
+            <form id = "searchForm">
+                <input type = "text" id = "searchInput" name = "search" placeholder = "Search Resources...">
+                <button type = "submit"> Search </button>
+            </form>
+        </section>
+        <section id = "results">
+            <h2> Results </h2>
+            <p> Search results will be displayed below. </p>
+            <iframe id = "searchResultsFrame" src = "" frameborder = "0"></iframe>
+        </section>
+    </section>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event){
+            event.preventDefault();
+            var query = document.getElementById('searchInput').value.trim();
+            if(query === ''){
+                alert('Please enter a search query.');
+                return;
+            }
+            var searchURL = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
+            document.getElementById('searchResultsFrame').src = searchURL;
+        });
+    </script>
+    <footer>
+        <p>& copy; 2024 Scholars Connect</p>
+    </footer>
+</body>
+</html>
